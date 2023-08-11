@@ -27,6 +27,7 @@ async fn main() -> Result<()> {
 
     println!("file to download: '{}'", fname);
     let fname = tmp_dir.path().join(fname);
+    println!("Location: {:?}", fname);
     File::create(fname)?
     };
     let content = response.text().await?;
